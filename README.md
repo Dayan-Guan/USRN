@@ -1,7 +1,7 @@
 # [CVPR 2022] Unbiased Subclass Regularization for Semi-Supervised Semantic Segmentation
 
 ### Updates
-- *03/2022*: Codes has been released! Two 2080Ti or single V100-32G are used for PASCAL VOC, four 2080Ti or two V100-32G are used for Cityscapes.
+- *03/2022*: Codes has been released. Two 2080Ti or single V100-32G is used for PASCAL VOC, four 2080Ti or two V100-32G are used for Cityscapes.
 
 
 ### Paper
