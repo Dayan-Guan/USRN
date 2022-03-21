@@ -66,3 +66,15 @@ This codebase is heavily borrowed from [CAC](https://github.com/dvlab-research/C
 
 ## Contact
 If you have any questions, please contact: dayan.guan@outlook.com
+
+## Citation
+If you find this code useful for your research, please cite our [paper](https://arxiv.org/abs/2203.10026):
+
+```
+@article{guan2022unbiased,
+  title={Unbiased Subclass Regularization for Semi-Supervised Semantic Segmentation},
+  author={Guan, Dayan and Huang, Jiaxing and Xiao, Aoran and Lu, Shijian},
+  journal={arXiv preprint arXiv:2203.10026},
+  year={2022}
+}
+```
