@@ -1,5 +1,6 @@
 ### conda environment
 conda create --name USRN --file requirements.txt
+conda activate USRN
 
 ### Balanced K-means
 git clone https://github.com/zhu-he/regularized-k-means.git
