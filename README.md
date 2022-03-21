@@ -18,6 +18,8 @@ Semi-supervised semantic segmentation learns from small amounts of labelled imag
 ### Preparation 
 1. Environment:
 ```bash
+git clone https://github.com/Dayan-Guan/USRN.git
+cd USRN
 sh init.sh
 ```
 
