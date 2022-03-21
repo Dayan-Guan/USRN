@@ -1,0 +1,93 @@
+{
+    "name": "Baseline",
+    "experim_name": "city_1over8_baseline",
+    "n_labeled_examples": 372,
+    "n_gpu": 2,
+    "num_images_all": 2975,
+    "dataset": "cityscapes",
+    "label_subcls": "./saved/city_1over8_baseline/label_subcls_balanced_kmeans",
+    "data_dir": "./datasets/cityscapes",
+    "datalist": 0,
+    "diff_lrs": true,
+    "ramp_up": 0.1,
+    "ignore_index": 255,
+    "lr_scheduler": "Poly",
+    "use_weak_lables":false,
+    "pretrained": true,
+    "random_seed": 42,
+
+    "model":{
+        "supervised": true,
+        "semi": false,
+        "epoch_start_unsup": 0,
+        "supervised_w": 1,
+        "sup_loss": "CE",
+        "layers": 50,
+        "downsample": true,
+        "out_dim": 256,
+        "backbone": "deeplab_v3+",
+        "pos_thresh_value": 0.75,
+        "step_save": 1,
+        "stride": 8
+    },
+
+    "optimizer": {
+        "type": "SGD",
+        "args": {
+            "lr": 0.02,
+            "weight_decay": 1e-4,
+            "momentum": 0.9
+        }
+    },
+
+    "train_supervised": {
+        "batch_size": 4,
+        "num_workers": 8,
+        "crop_size": 720,
+        "shuffle": true,
+        "base_size": 2048,
+        "scale": true,
+        "augment": true,
+        "flip": true,
+        "rotate": false,
+        "blur": false,
+        "split": "train_supervised",
+        "jitter": true
+    },
+
+    "train_unsupervised": {
+        "batch_size": 4,
+        "num_workers": 8,
+        "crop_size": 720,
+        "shuffle": true,
+        "base_size": 2048,
+        "scale": true,
+        "augment": true,
+        "flip": true,
+        "rotate": false,
+        "blur": false,
+        "split": "train_unsupervised",
+        "stride": 8
+    },
+
+    "val_loader": {
+        "batch_size": 2,
+        "val": true,
+        "split": "val",
+        "shuffle": false,
+        "num_workers": 2
+    },
+
+    "trainer": {
+        "epochs": 480,
+        "early_stop": 600,
+        "save_dir": "saved/",
+        "save_period": 1,
+        "monitor": "max Mean_IoU",
+        "tensorboardX": true,
+        "log_dir": "saved/",
+        "log_per_iter": 20,
+        "val": true,
+        "val_per_epochs": 1
+    }
+}
