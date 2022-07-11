@@ -118,7 +118,7 @@ def main(gpu, ngpus_per_node, config, resume, test, save_feature):
             model=model,
             resume=resume,
             config=config,
-            val_loader=val_loader,
+            val_loader=supervised_loader,
             iter_per_epoch=iter_per_epoch,
             train_logger=train_logger,
             gpu=gpu,
