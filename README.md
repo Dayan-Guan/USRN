@@ -71,10 +71,11 @@ If you have any questions, please contact: dayan.guan@outlook.com
 If you find this code useful for your research, please cite our [paper](https://arxiv.org/abs/2203.10026):
 
 ```
-@article{guan2022unbiased,
+@inproceedings{guan2022unbiased,
   title={Unbiased Subclass Regularization for Semi-Supervised Semantic Segmentation},
   author={Guan, Dayan and Huang, Jiaxing and Xiao, Aoran and Lu, Shijian},
-  journal={arXiv preprint arXiv:2203.10026},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={9968--9978},
   year={2022}
 }
 ```
